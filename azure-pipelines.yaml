@@ -56,7 +56,7 @@ stages:
     - script: pip install .[test]
       displayName: Install dependencies
 
-    - script: coverage run pytest --junit-xml=junit.xml
+    - script: coverage run -m pytest --junit-xml=junit.xml
       displayName: Run pytest
 
     - task: PublishTestResults@2
